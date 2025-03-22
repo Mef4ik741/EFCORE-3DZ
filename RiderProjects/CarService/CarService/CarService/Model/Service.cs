@@ -14,5 +14,5 @@ public class Service
     
     public int ServicePrice { get; set; }
     
-    public ICollection<OrderedServices> OrderedServices { get; set; }
+    public List<OrderedServices> OrderedServices { get; set; }
 }   

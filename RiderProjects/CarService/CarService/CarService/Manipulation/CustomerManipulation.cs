@@ -46,8 +46,13 @@ public static class CustomerManipulation
             Console.WriteLine("4 - Изменить Логин");
             Console.WriteLine("5 - Изменить Пароль");
             Console.WriteLine("6 - Выйти из программы");
-            int choice = int.Parse(Console.ReadLine()!);
 
+            if (!int.TryParse(Console.ReadLine()!, out int choice))
+            {
+                Console.WriteLine("Некорректный ввод!");
+                continue;
+            }
+            
             if (choice == 1)
             {
                 Console.Write("Введите имя: ");

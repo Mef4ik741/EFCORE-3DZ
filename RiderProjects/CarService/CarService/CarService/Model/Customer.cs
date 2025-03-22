@@ -26,5 +26,5 @@ public class Customer
     
     public ICollection<Car> Cars { get; set; }
 
-    public ICollection<Order> Orders { get; set; }
+    public List<Order> Orders { get; set; }
 }

@@ -150,3 +150,4 @@ C:\Users\rauf2\RiderProjects\CarService\CarService\CarService\obj\Debug\net9.0\r
 C:\Users\rauf2\RiderProjects\CarService\CarService\CarService\obj\Debug\net9.0\CarService.pdb
 C:\Users\rauf2\RiderProjects\CarService\CarService\CarService\obj\Debug\net9.0\CarService.genruntimeconfig.cache
 C:\Users\rauf2\RiderProjects\CarService\CarService\CarService\obj\Debug\net9.0\ref\CarService.dll
+C:\Users\rauf2\RiderProjects\CarService\CarService\CarService\obj\Debug\net9.0\CarService.sourcelink.json

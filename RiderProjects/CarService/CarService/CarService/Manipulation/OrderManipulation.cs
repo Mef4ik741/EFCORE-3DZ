@@ -29,15 +29,13 @@ public static class OrderManipulation
             var car = carsList[i];  
             Console.WriteLine($"{i + 1}. {car.Brand} {car.Model} ({car.Year})");
         }
-
         
         var carIndex = int.Parse(Console.ReadLine()!) - 1;
         var carId = customer.Cars.ElementAt(carIndex).Id;
 
         Console.Write("Введите дату заказа (yyyy-MM-dd): ");
         var orderDate = DateTime.Parse(Console.ReadLine()!);
-
-
+        
         var order = new Order
         {
             CustomerId = customerId,
@@ -45,6 +43,7 @@ public static class OrderManipulation
             OrderDate = orderDate,
             Status = true
         };
+        
         context.Orders.Add(order);
         context.SaveChanges();
     }

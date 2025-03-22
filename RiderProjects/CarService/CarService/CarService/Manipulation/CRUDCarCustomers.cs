@@ -75,41 +75,37 @@ public static class CrudCarCustomers
                 Console.WriteLine("3 - Изменить год выпуска");
                 Console.WriteLine("4 - Выйти");
                 
-                int choice = int.Parse(Console.ReadLine()!);
-
-                if (choice == 1)
+                if (!int.TryParse(Console.ReadLine(), out int choice))
                 {
-                    Console.Write("Введите Бренд: "); 
-                    string brand = Console.ReadLine()!;               
-                    
-                    car.Brand = brand;     
-                }
-                
-                else if (choice == 2)
-                {
-                    Console.Write("Введите Модель: "); 
-                    string model = Console.ReadLine()!;               
-                    
-                    car.Model = model;     
-                }
-                
-                else if (choice == 3)
-                {
-                    Console.Write("Введите Год выпуска: "); 
-                    int year = int.Parse(Console.ReadLine()!);               
-                    
-                    car.Year = year;     
-                }
-                
-                else if (choice == 4)
-                {
-                    break;
-                }
-
-                else
-                {
-                    Console.WriteLine("Не правильный ввод");
+                    Console.WriteLine("Некорректный ввод!");
                     continue;
+                }
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.Write("Введите Бренд: "); 
+                        string brand = Console.ReadLine()!;               
+                    
+                        car.Brand = brand;  
+                        break;
+                    case 2:
+                        Console.Write("Введите Модель: "); 
+                        string model = Console.ReadLine()!;               
+                    
+                        car.Model = model;   
+                        break;
+                    case 3:
+                        Console.Write("Введите Год выпуска: "); 
+                        int year = int.Parse(Console.ReadLine()!);               
+                    
+                        car.Year = year; 
+                        break;
+                    case 4: 
+                        return;
+                    default:
+                        Console.WriteLine("Некорректный выбор!");
+                        break;
                 }
             }
         }
